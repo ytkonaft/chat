@@ -13,16 +13,16 @@
     <div class="board-body">
       ololo
     </div>
-    <div class="board-footer">
-      asd
-    </div>
+    <BoardFooter />
   </div>
 </template>
 
 <script>
+import BoardFooter from "@/components/BoardFooter.vue";
+
 export default {
   components: {
-    // SignInForm
+    BoardFooter
   }
 };
 </script>
@@ -90,13 +90,6 @@ export default {
   }
   .board-body {
     flex: 1 1 auto;
-  }
-  .board-footer {
-    background-color: #235c61;
-    padding: 5px 15px;
-    height: 60px;
-    flex: 0 1 60px;
-    box-sizing: border-box;
   }
 }
 </style>
