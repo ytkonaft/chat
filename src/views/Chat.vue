@@ -33,9 +33,11 @@ export default {
   justify-content: center;
   width: 100%;
   height: 100%;
-
+  flex-flow: column;
   .chat-wrp {
+    display: block;
     width: 920px;
+    min-height: 550px;
     height: 90%;
     background-color: #faf7f4;
     border-radius: 10px;

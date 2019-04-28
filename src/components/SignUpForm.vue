@@ -62,7 +62,14 @@ export default {
   },
   methods: {
     submitForm() {
-      this.anime.play();
+      this.$refs.formRef.validate(valid => {
+        if (valid) {
+          this.$router.push("/");
+        } else {
+          this.anime.play();
+          return false;
+        }
+      });
     }
   },
   mounted() {

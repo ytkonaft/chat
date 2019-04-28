@@ -1,28 +1,30 @@
 <template>
   <div class="message-board">
     <div class="board-header">
-      <div class="user-block">
-        <div class="user-pic" />
-        <div class="user-info">
-          <span class="user-name">Consumer</span>
-          <span class="user-status">last seen recently</span>
+      <div class="board-header_inner">
+        <div class="user-block">
+          <div class="user-pic" />
+          <div class="user-info">
+            <span class="user-name">Consumer</span>
+            <span class="user-status">last seen recently</span>
+          </div>
         </div>
+        <button class="more-btn"><i class="el-icon-more"></i></button>
       </div>
-      <button class="more-btn"><i class="el-icon-more"></i></button>
     </div>
-    <div class="board-body">
-      ololo
-    </div>
+    <BoardBody />
     <BoardFooter />
   </div>
 </template>
 
 <script>
 import BoardFooter from "@/components/BoardFooter.vue";
+import BoardBody from "@/components/BoardBody.vue";
 
 export default {
   components: {
-    BoardFooter
+    BoardFooter,
+    BoardBody
   }
 };
 </script>
@@ -35,12 +37,15 @@ export default {
   .board-header {
     padding: 10px 15px;
     background-color: #eee;
-    flex-direction: row;
-    display: flex;
-    flex: 0 1 auto;
+    display: block;
     height: 60px;
     box-sizing: border-box;
-    justify-content: space-between;
+    .board-header_inner {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
     .user-block {
       display: flex;
       flex-direction: row;
@@ -87,9 +92,6 @@ export default {
       color: #333;
       background-color: rgba(255, 255, 255, 0.3);
     }
-  }
-  .board-body {
-    flex: 1 1 auto;
   }
 }
 </style>
